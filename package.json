@@ -1,11 +1,14 @@
 {
   "name": "@solness/core",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "Solness core module",
+  "files": [
+    "dist/"
+  ],
   "scripts": {
     "build": "rimraf dist && tsc -p tsconfig.build.json",
     "lint": "tslint -p tsconfig.json -c tslint.json",
-    "release": "np",
+    "release": "npm run build && np",
     "test": "echo \"Warning: no test specified\""
   },
   "repository": {
