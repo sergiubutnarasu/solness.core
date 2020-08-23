@@ -8,7 +8,6 @@ export {
   StringHelper,
 } from './helpers';
 export {
-  AppConfig,
   AppConfigKey,
   AttachmentData,
   BaseEntity,

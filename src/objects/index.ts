@@ -11,7 +11,6 @@ export {
 } from './model';
 export { PaginatedResponse } from './response';
 export {
-  AppConfig,
   KeyValue,
   IBaseResolverOptions,
   IPageList,
