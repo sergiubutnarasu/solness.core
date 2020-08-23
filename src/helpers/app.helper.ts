@@ -15,7 +15,7 @@ class AppHelperClass {
     return AppHelperClass.instance;
   }
 
-  public init(configs: KeyValue) {
+  public init(configs?: KeyValue) {
     this.appConfig = AppHelperClass.generateAppConfig(configs);
   }
 
@@ -31,7 +31,7 @@ class AppHelperClass {
     return this.getEnvironment() === environment;
   }
 
-  private static generateAppConfig(configs: KeyValue): AppConfig {
+  private static generateAppConfig(configs?: KeyValue): AppConfig {
     return {
       DatabaseHost: process.env.CORE_DB_HOST,
       DatabaseName: process.env.CORE_DB_NAME,
