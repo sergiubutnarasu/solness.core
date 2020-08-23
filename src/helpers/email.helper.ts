@@ -6,17 +6,15 @@ import AppHelper from './app.helper';
 class EmailHelperClass {
   private static instance: EmailHelperClass;
 
-  private constructor() {}
+  private constructor() {
+    sendgrid.setApiKey(AppHelper.getConfig(AppConfigKey.SendgridKey));
+  }
 
   public static getInstance() {
     if (!EmailHelperClass.instance) {
       EmailHelperClass.instance = new EmailHelperClass();
     }
     return EmailHelperClass.instance;
-  }
-
-  public init() {
-    sendgrid.setApiKey(AppHelper.getConfig(AppConfigKey.SendgridKey));
   }
 
   public async sendEmail(mail: MailDataRequired) {

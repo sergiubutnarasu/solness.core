@@ -6,7 +6,9 @@ class AppHelperClass {
 
   private appConfig: AppConfig;
 
-  private constructor() {}
+  private constructor() {
+    this.init();
+  }
 
   public static getInstance() {
     if (!AppHelperClass.instance) {
