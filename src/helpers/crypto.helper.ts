@@ -38,7 +38,7 @@ class CryptoHelperClass {
     return encrypted;
   }
 
-  public async decrypt(secretKey: string, text: string) {
+  public decrypt(secretKey: string, text: string) {
     const decipher = crypto.createDecipheriv(
       this.ALGORITHM,
       this.hashSecretKey(secretKey),
@@ -46,6 +46,7 @@ class CryptoHelperClass {
     );
     let decrypted = decipher.update(text, 'base64', 'utf8');
     decrypted += decipher.final();
+
     return decrypted;
   }
 
